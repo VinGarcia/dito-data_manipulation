@@ -79,7 +79,7 @@ module.exports = {
     timeline = Object.values(timeline);
 
     // And sort it by the timestamp value:
-    // timeline.sort((v1,v2) => v2.timestamp-v1.timestamp);
+    timeline.sort((v1,v2) => new Date(v2.timestamp) - new Date(v1.timestamp));
 
     return timeline;
   }
