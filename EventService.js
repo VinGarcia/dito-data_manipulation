@@ -26,7 +26,7 @@ module.exports = {
    * Converts a list of events into an ordered list
    * of sales grouped by its transaction_id:
    */
-  timeline : (events) => {
+  buildTimeline : (events) => {
     // Simplify the structure of all events:
     for (let i in events) {
       events[i] = parseEvent(events[i]);

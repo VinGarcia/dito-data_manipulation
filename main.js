@@ -1,10 +1,10 @@
 let fs = require('fs');
-let reportService = require('./reportService.js');
+let EventService = require('./EventService.js');
 
 main();
 function main() {
   let events = require('./events.json').events;
-  let timeline = reportService.timeline(events);
+  let timeline = EventService.buildTimeline(events);
 
   let timeline_str = JSON.stringify(timeline);
   console.log(timeline_str);
