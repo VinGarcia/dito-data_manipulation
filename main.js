@@ -6,7 +6,7 @@ function main() {
   let events = require('./events.json').events;
   let timeline = EventService.buildTimeline(events);
 
-  let timeline_str = JSON.stringify(timeline);
+  let timeline_str = JSON.stringify(timeline, null, 2);
 
   // Show the result on the screen:
   console.log(timeline_str);
