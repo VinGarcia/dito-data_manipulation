@@ -1,5 +1,5 @@
 let fs = require('fs');
-let EventService = require('./EventService.js');
+let EventService = require('./Services/EventService.js');
 
 main();
 function main() {
