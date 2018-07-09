@@ -1,5 +1,5 @@
 
-let remap = require('./tools.js').remap;
+let remap = require('./UtilService.js').remap;
 
 /**
  * Used to convert each received event into
