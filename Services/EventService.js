@@ -1,5 +1,5 @@
 
-let remap = require('./UtilService.js').remap;
+let reduceByKey = require('./UtilService.js').reduceByKey;
 
 /**
  * Used to convert each received event into
@@ -33,10 +33,12 @@ module.exports = {
     }
     
     // Build the timeline:
-    let timeline = remap(events,
-      // Group the events by its transaction_id:
+    let timeline = reduceByKey(events,
+      // Choose the key to use to group each reduction:
       function(item) { return item.data.transaction_id; },
     
+      // Reduce all items with the same transaction_id
+      // to one item of the timeline list:
       function(item, timelineItem) {
         // If this is the first event with this transaction_id:
         // Create a new timelineItem:

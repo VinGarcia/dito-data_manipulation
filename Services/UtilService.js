@@ -17,7 +17,7 @@ module.exports = {
    *   If an object already exists with the given key it is passed
    *   as the second argument.
    */
-  remap: function(table, getKey, getValue) {
+  reduceByKey: function(table, getKey, getValue) {
     var atvList = [];
 
     getKey = typeof getKey == 'function' ? getKey : (function(item) { return item.id; });
